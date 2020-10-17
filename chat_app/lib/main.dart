@@ -1,4 +1,5 @@
 import 'package:chat_app/helpers/app_constant.dart';
+import 'package:chat_app/screens/chat_screen.dart';
 import 'package:flutter/material.dart';
 
 void main() {
@@ -6,8 +7,7 @@ void main() {
     MaterialApp(
       title: 'Chat App',
       theme: ThemeData(
-        primaryColor:
-            AppConstants.hexToColor(AppConstants.APP_BACKGROUND_COLOR),
+        primaryColor: AppConstants.hexToColor(AppConstants.APP_PRIMARY_COLOR),
         backgroundColor:
             AppConstants.hexToColor(AppConstants.APP_BACKGROUND_COLOR),
         primaryColorLight:
@@ -17,12 +17,7 @@ void main() {
         dividerColor: Colors.black12,
         textTheme: TextTheme(caption: TextStyle(color: Colors.white)),
       ),
-      home: Scaffold(
-        drawer: _appDrawer(),
-        appBar: AppBar(
-          title: Text('Chat App'),
-        ),
-      ),
+      home: ChatScreen(),
     ),
   );
 }
